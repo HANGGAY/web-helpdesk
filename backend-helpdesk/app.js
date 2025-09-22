@@ -35,10 +35,11 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-  // ✅ Routes
-  app.use('/api/auth', authRoutes);
-  app.use('/api/users', userRoutes);
-  app.use('/api/tickets', ticketRoutes);
+// ✅ Routes
+app.use('/user', authRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/tickets', ticketRoutes);
 
 // ✅ Root endpoint
 app.get('/', (req, res) => {
